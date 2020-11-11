@@ -45,9 +45,7 @@ void utils::affichage()
 
     draw::corps();
     draw::antenne();
-    draw::pates();
-
-    glFlush();
+    draw::pattes(anglex);
 
     //On echange les buffers
     glutSwapBuffers();

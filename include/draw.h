@@ -20,7 +20,7 @@ namespace fourmiProjet
         public:
             void static corps();
             void static antenne();
-            void static pates();
+            void static pattes(int angley);
 
         private:
             void static regtangle(GLfloat x, GLfloat y, GLfloat z);

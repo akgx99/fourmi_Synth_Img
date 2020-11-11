@@ -12,7 +12,6 @@ void draw::corps()
     glColor3f(0.1,0.1,0.1); //définit la couleur du corps de la fourmi
     glScalef(1, 1.3, 1);
     sphere(0.18,34, 34);
-    glScalef(1, 1 / 1.3, 1);
     glTranslatef(0.00, 0.30, 0.00);
 
     sphere(0.20,34, 34);
@@ -20,21 +19,23 @@ void draw::corps()
     glRotatef(-90, 1, 0, 0);
     glRotatef(-25, 0, 1, 0);
     glTranslatef(0.00, 0.10, 0.00);
-
     glRotatef(25, 0, 1, 0);
+
     glRotatef(90, 1, 0, 0);
     glScalef(1, 1.3, 1);
     glTranslatef(0.15, -0.65, 0.05);
     sphere(0.25,34, 34);
     glScalef(1, 1 / 1.3, 1);
-    glPopMatrix();
-}
 
+    glPopMatrix();
+
+    glColor3f(1,1,1); //définit la couleur des pattes et des antennes
+
+}
 
 void draw::antenne()
 {
     glBegin(GL_LINES);
-    glColor3f(1,1,1); //définit la couleur des pates et des antennes
     glVertex3f(0.00, 0.30, 0.00);
     glVertex3f(0.40, 0.70, 0.40);
     glVertex3f(0.00, 0.30, 0.00);
@@ -42,9 +43,9 @@ void draw::antenne()
     glEnd();
 }
 
-void draw::pates()
+void draw::pattes(int angley)
 {
-      //pate gauche arrière
+    //pate gauche arrière
     glBegin(GL_LINE_STRIP);
     glVertex3f(0.00, 0.05, 0.18);
     glVertex3f(0.35 + 0.05 * cosinus, 0.15, 0.25);
